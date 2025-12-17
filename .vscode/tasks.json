@@ -1,0 +1,215 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build current C file (macOS)",
+            "type": "shell",
+            "command": "clang",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "build current C file (Windows)",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "build current C file (Linux)",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "build current C++ file (macOS)",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-g",
+                "-Wall",
+                "-std=c++17",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "build current C++ file (Windows)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-Wall",
+                "-std=c++17",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "build current C++ file (Linux)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-Wall",
+                "-std=c++17",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "build all C++ files (macOS)",
+            "type": "shell",
+            "command": "clang++ -g -Wall -std=c++17 *.cpp -o a.out",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compiles all .cpp files in the current folder (macOS)"
+        },
+        {
+            "label": "build all C++ files (Windows)",
+            "type": "shell",
+            "command": "g++ -g -Wall -std=c++17 *.cpp -o a.exe",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compiles all .cpp files in the current folder (Windows)"
+        },
+        {
+            "label": "build all C++ files (Linux)",
+            "type": "shell",
+            "command": "g++ -g -Wall -std=c++17 *.cpp -o a.out",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compiles all .cpp files in the current folder (Linux)"
+        },
+        {
+            "label": "build all C files (macOS)",
+            "type": "shell",
+            "command": "clang -g -Wall -std=c17 *.c -o a.out",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compiles all .c files in the current folder (macOS)"
+        },
+        {
+            "label": "build all C files (Windows)",
+            "type": "shell",
+            "command": "gcc -g -Wall -std=c17 *.c -o a.exe",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compiles all .c files in the current folder (Windows)"
+        },
+        {
+            "label": "build all C files (Linux)",
+            "type": "shell",
+            "command": "gcc -g -Wall -std=c17 *.c -o a.out",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compiles all .c files in the current folder (Linux)"
+        }
+    ]
+}

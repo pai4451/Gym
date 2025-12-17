@@ -1,0 +1,17 @@
+# macOS system files
+.DS_Store
+
+# Debug symbols and binaries
+*.o
+*.out
+*.exe
+*.a
+*.so
+*.dylib
+*.obj
+*.dSYM/
+**/main
+*.bin
+*.bmp
+.vscode/c_cpp_properties.json
+.vscode/settings.json
